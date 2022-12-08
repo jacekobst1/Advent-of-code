@@ -9,6 +9,14 @@ class DirectorySizeCalculator
         return $this->sumSizeAtMost($mainDirectory, 100000);
     }
 
+    public function getMinTotalSizeOfAtLeast(Directory $mainDirectory, int $size): int
+    {
+        $smallestSize = PHP_INT_MAX;
+        $this->minSizeAtLeast($mainDirectory, $size, $smallestSize);
+
+        return $smallestSize;
+    }
+
     private function sumSizeAtMost(Element $element, int $limit): int
     {
         $size = 0;
@@ -24,5 +32,20 @@ class DirectorySizeCalculator
         }
 
         return $size;
+    }
+
+    private function minSizeAtLeast(Element $element, int $limit, int &$smallestSize): void
+    {
+        if ($element instanceof Directory) {
+            $elementSize = $element->size();
+
+            if ($elementSize >= $limit && $elementSize < $smallestSize) {
+                $smallestSize = $element->size();
+            }
+
+            foreach ($element->getElements() as $el) {
+                $this->minSizeAtLeast($el, $limit, $smallestSize);
+            }
+        }
     }
 }
