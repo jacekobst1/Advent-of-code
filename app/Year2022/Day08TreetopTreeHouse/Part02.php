@@ -4,11 +4,6 @@ namespace App\Year2022\Day08TreetopTreeHouse;
 
 use App\Tools\FileReader;
 use Exception;
-use function array_filter;
-use function array_search;
-use function count;
-use function sizeof;
-use function var_dump;
 
 class Part02
 {
@@ -64,6 +59,7 @@ class Part02
     {
         $forestWidth = count($rows[$rowKey]);
         $forestLength = count($rows);
+        $abc = count($rows);
 
         $distance = [
             'left' => 0,

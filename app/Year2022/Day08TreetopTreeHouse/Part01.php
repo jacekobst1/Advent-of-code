@@ -4,11 +4,6 @@ namespace App\Year2022\Day08TreetopTreeHouse;
 
 use App\Tools\FileReader;
 use Exception;
-use function array_filter;
-use function array_search;
-use function count;
-use function sizeof;
-use function var_dump;
 
 class Part01
 {
