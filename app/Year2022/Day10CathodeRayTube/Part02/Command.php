@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Year2022\Day10CathodeRayTube;
+namespace App\Year2022\Day10CathodeRayTube\Part02;
 
 class Command
 {

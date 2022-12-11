@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Year2022\Day10CathodeRayTube;
+namespace App\Year2022\Day10CathodeRayTube\Part01;
 
 use App\Tools\FileReader;
 use Exception;
@@ -19,7 +19,7 @@ class Part01
      */
     public function run(): int
     {
-        $file = $this->fileReader->readFile(dirname(__FILE__) . '/input.txt');
+        $file = $this->fileReader->readFile(dirname(__FILE__, 2) . '/input.txt');
 
         $result = $this->calculateResult($file);
 

@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Year2022\Day10CathodeRayTube;
+namespace App\Year2022\Day10CathodeRayTube\Part01;
 
 use Ds\Queue;
-use SplQueue;
 
 /** @var Queue<Command> $commands  */
 class CPU
