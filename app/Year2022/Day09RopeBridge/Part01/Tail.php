@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Year2022\Day09RopeBridge;
+namespace App\Year2022\Day09RopeBridge\Part01;
 
 class Tail
 {

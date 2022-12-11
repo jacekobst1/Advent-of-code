@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Year2022\Day09RopeBridge;
+namespace App\Year2022\Day09RopeBridge\Part02;
 
 enum Direction: string
 {

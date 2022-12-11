@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Year2022\Day09RopeBridge;
+namespace App\Year2022\Day09RopeBridge\Part02;
 
-class Head
+class Head implements RopePart
 {
     private int $x;
     private int $y;
-    private readonly Tail $tail;
+    private readonly Knot $knot;
 
-    public function __construct(int $x, int $y)
+    public function __construct(int $x, int $y, int $numberOfKnotsToCreate = 1)
     {
         $this->x = $x;
         $this->y = $y;
-        $this->tail = new Tail($x, $y);
+        $this->knot = new Knot($x, $y, $numberOfKnotsToCreate);
     }
 
     public function getX(): int
@@ -27,7 +27,7 @@ class Head
 
     public function tailPositionString(): string
     {
-        return $this->tail->positionString();
+        return $this->knot->tailPositionString();
     }
 
     public function move(Direction $direction): void
@@ -39,6 +39,6 @@ class Head
             Direction::DOWN => $this->y--,
         };
 
-        $this->tail->followHead($this);
+        $this->knot->followRopePart($this);
     }
 }
