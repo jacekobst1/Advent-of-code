@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3914b42720d43a9d5dc91c319b4e95e3",
+    "content-hash": "7ae6d6fdcc305c2e624bb3eccb4c4f69",
     "packages": [
         {
             "name": "laravel/serializable-closure",
@@ -240,6 +240,62 @@
                 "source": "https://github.com/PHP-DI/PhpDocReader/tree/2.2.1"
             },
             "time": "2020-10-12T12:39:22+00:00"
+        },
+        {
+            "name": "php-ds/php-ds",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-ds/polyfill.git",
+                "reference": "2aaf8b8bab426a0e89d213c6eb7a83dcf8d0dcc1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-ds/polyfill/zipball/2aaf8b8bab426a0e89d213c6eb7a83dcf8d0dcc1",
+                "reference": "2aaf8b8bab426a0e89d213c6eb7a83dcf8d0dcc1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.0"
+            },
+            "provide": {
+                "ext-ds": "1.3.0"
+            },
+            "require-dev": {
+                "php-ds/tests": "^1.3"
+            },
+            "suggest": {
+                "ext-ds": "to improve performance and reduce memory usage"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ds\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rudi Theunissen",
+                    "email": "rudolf.theunissen@gmail.com"
+                }
+            ],
+            "keywords": [
+                "data structures",
+                "ds",
+                "php",
+                "polyfill"
+            ],
+            "support": {
+                "issues": "https://github.com/php-ds/polyfill/issues",
+                "source": "https://github.com/php-ds/polyfill/tree/master"
+            },
+            "time": "2022-09-25T00:25:37+00:00"
         },
         {
             "name": "psr/container",
@@ -2035,7 +2091,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "php-di/php-di": 20
+        "php-di/php-di": 20,
+        "php-ds/php-ds": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
