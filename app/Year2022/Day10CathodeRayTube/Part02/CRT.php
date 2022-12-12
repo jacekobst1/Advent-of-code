@@ -4,9 +4,10 @@ namespace App\Year2022\Day10CathodeRayTube\Part02;
 
 class CRT
 {
+    private const ROW_LENGTH = 40;
+    
     private array $pixels = [];
     private int $currentRow = 0;
-    private int $rowLength = 40;
 
     public function draw(int $cycle, int $register): void
     {
@@ -31,7 +32,7 @@ class CRT
 
     private function spriteIsPositioned(int $cycle, int $register): bool
     {
-        $pixelPosition = --$cycle - ($this->currentRow * $this->rowLength);
+        $pixelPosition = --$cycle - ($this->currentRow * self::ROW_LENGTH);
 
         return in_array(
             $pixelPosition,

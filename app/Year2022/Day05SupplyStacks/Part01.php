@@ -3,8 +3,8 @@
 namespace App\Year2022\Day05SupplyStacks;
 
 use App\Tools\FileReader;
+use Ds\Stack;
 use Exception;
-use SplStack;
 
 class Part01
 {
@@ -43,7 +43,7 @@ class Part01
         }
 
         foreach ($reverseArrays as $arrKey => $arrValues) {
-            $stack = new SplStack();
+            $stack = new Stack();
             foreach (array_reverse($arrValues) as $value) {
                 $stack->push($value);
             }
@@ -100,7 +100,7 @@ class Part01
         ];
     }
 
-    private function executeOperation(int $numberOfItemsToMove, SplStack $sourceStack, SplStack $targetStack): void
+    private function executeOperation(int $numberOfItemsToMove, Stack $sourceStack, Stack $targetStack): void
     {
         for ($i = 1; $i <= $numberOfItemsToMove; $i++) {
             $targetStack->push(
@@ -109,14 +109,14 @@ class Part01
         }
     }
 
-    /** @var SplStack[] $stacks */
+    /** @var Stack[] $stacks */
     private function getTopValues(array $stacks): string
     {
         $result = '';
         ksort($stacks);
 
         foreach ($stacks as $stack) {
-            $result .= $stack->top();
+            $result .= $stack->peek();
         }
 
         return $result;

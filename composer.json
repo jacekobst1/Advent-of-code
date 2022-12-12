@@ -11,7 +11,8 @@
     "require": {
         "php": "^8.1",
         "php-di/php-di": "dev-master",
-        "php-ds/php-ds": "dev-master"
+        "php-ds/php-ds": "dev-master",
+        "ext-ctype": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "^9"

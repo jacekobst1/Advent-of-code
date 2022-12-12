@@ -4,7 +4,7 @@ namespace App\Year2022\Day05SupplyStacks;
 
 use App\Tools\FileReader;
 use Exception;
-use SplStack;
+use Ds\Stack;
 
 class Part02
 {
@@ -43,7 +43,7 @@ class Part02
         }
 
         foreach ($reverseArrays as $arrKey => $arrValues) {
-            $stack = new SplStack();
+            $stack = new Stack();
             foreach (array_reverse($arrValues) as $value) {
                 $stack->push($value);
             }
@@ -100,7 +100,7 @@ class Part02
         ];
     }
 
-    private function executeOperation(int $numberOfItemsToMove, SplStack $sourceStack, SplStack $targetStack): void
+    private function executeOperation(int $numberOfItemsToMove, Stack $sourceStack, Stack $targetStack): void
     {
         $items = [];
 
@@ -113,14 +113,14 @@ class Part02
         }
     }
 
-    /** @var SplStack[] $stacks */
+    /** @var Stack[] $stacks */
     private function getTopValues(array $stacks): string
     {
         $result = '';
         ksort($stacks);
 
         foreach ($stacks as $stack) {
-            $result .= $stack->top();
+            $result .= $stack->peek();
         }
 
         return $result;
