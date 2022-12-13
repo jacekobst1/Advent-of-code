@@ -1,6 +1,6 @@
 <?php
 
-use App\Year2022\Day11MonkeyInTheMiddle\Part01\Handler;
+use App\Year2022\Day11MonkeyInTheMiddle\Part02\Handler;
 
 require __DIR__ . '/vendor/autoload.php';
 
